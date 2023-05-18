@@ -1,15 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Clase4 from './ejercicios/ejercicio-clase-4/Clase4'
+import Clase5 from './ejercicios/ejercicio-clase-5/Clase5'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
-  <React.StrictMode> {//Saqué esto porque en la consola carga dos veces las cosas y se hace dificil de leer.
-  }
-  <>
-  <Clase4 />
-  </>
-    
-  </React.StrictMode>,
+  //<React.StrictMode>
+  //  <App />
+  //</React.StrictMode>,
+  <Clase5 />
 )

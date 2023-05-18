@@ -1,0 +1,9 @@
+.Lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+:global(.compact-theme) ul {
+    gap: 8px;
+}

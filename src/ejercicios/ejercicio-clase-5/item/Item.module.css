@@ -1,0 +1,18 @@
+.Item {
+    border: solid;
+    border-width: 1px;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    list-style: none;
+    background-color: rgb(250, 212, 164);
+    border-color: aliceblue;
+    color: black;
+}
+.Item:hover{
+    background-color:aliceblue;
+}
+
+:global(.compact-theme) li{
+    padding: 8px;
+}
