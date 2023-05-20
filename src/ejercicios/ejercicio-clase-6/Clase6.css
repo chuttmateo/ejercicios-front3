@@ -1,0 +1,28 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    
+  }
+  .catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .producto{
+    background-color: burlywood;
+    border: solid;
+    border-width: 2px;
+    border-color: brown;
+  }
+  .cuentas, .usuarios{
+    display: flex;
+    list-style: none;
+    color: aliceblue;
+    gap: 10px;
+  }
+  .cuenta{
+    text-decoration: none;
+    color: white;
+  }
