@@ -17,13 +17,13 @@ function Calculadora(props) {
         props.onEquals(sum)
     }
     return(
-        <>
+        <div className="calculadora">
         <h1>{sum}</h1>
         <button onClick={sumar}>+</button>
         <button onClick={restar}>-</button>
         <button onClick={cero}>reset</button>
         <button onClick={handleOnEquals}>=</button>
-        </>
+        </div>
     )
 }
 export default Calculadora
