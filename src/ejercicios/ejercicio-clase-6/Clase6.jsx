@@ -1,49 +1,38 @@
 import "./Clase6.css";
-import products from "../../fakeApi/products.json";
-import cuentas from "../../fakeApi/accounts.json";
-import Producto from "./producto/Producto";
-import usuarios from "../../fakeApi/users.json";
-import Usuario from "./usuario/Usuario";
-
+import products from './products.json'
+import Producto from "./Producto";
+import accounts from './accounts.json'
+import users from './users.json'
+import Usuario from "./Usuario";
 function Clase6() {
-  let arr = products.map((p) => {
-    return (
-      <Producto
-        key={p.id}
-        nombre={p.nombre}
-        descripcion={p.descripcion}
-        precio={p.precio}
-      />
-    );
-  });
-
-  let arrCuentas = cuentas.map((c) => {
-    return (
-      <li key={c.account}>
-        <a
-          className="cuenta"
-          target="_blank"
-          href={`https://twitter.com/${c.account}`}
-          rel="noreferrer"
-        >
-          {c.userName}
-        </a>
-      </li>
-    );
-  });
-
-  let arrUsuarios = usuarios.map((user) => {
-    return (
-        <Usuario key={user.email} apodo={user.apodo} />
-    );
-  });
-
+  
   return (
     <>
-      <h1>Cuentas</h1>
-      <ul className="cuentas">{arrCuentas}</ul>
-      <ul className="usuarios">{arrUsuarios}</ul>
-      <div className="catalogo">{arr}</div>
+    <div className="flex">
+    {products.map((product) => {
+      return (
+        <Producto key={product.id}
+        {...product}
+        />
+      )
+    })}
+    </div>
+    <div className="flex">
+    {accounts.map((account)=>{
+      return(
+        <li key={account.account} className="cuenta"><a href={`https://twitter.com/${account.account}`} target="_blank" rel="noopener noreferrer">{account.userName}</a></li>
+      )
+    })}
+    </div>
+    <div className="flex">
+    {users.map((user)=>{
+      return(
+        <Usuario key={user.email}
+        {...user}
+        />
+      )
+    })}
+    </div>
     </>
   );
 }

@@ -3,26 +3,22 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
   }
-  .catalogo{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .producto{
-    background-color: burlywood;
-    border: solid;
-    border-width: 2px;
-    border-color: brown;
-  }
-  .cuentas, .usuarios{
-    display: flex;
+  .producto, .usuario, .cuenta{
+    border-radius: 10px;
+    padding: 10px;
+    background-color:rgb(235, 187, 124);
+    font-weight: 700;
     list-style: none;
-    color: aliceblue;
-    gap: 10px;
+    color: #000;
   }
-  .cuenta{
-    text-decoration: none;
-    color: white;
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
