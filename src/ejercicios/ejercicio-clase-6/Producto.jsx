@@ -3,9 +3,10 @@ function Producto(props) {
     
     return(
         <div className="producto">
-            <h2>{props.nombre}</h2>
-            <p>{props.descripcion}</p>
-            <p>{props.precio}</p>
+            <h2>{props.product.nombre}</h2>
+            <p>{props.product.descripcion}</p>
+            <p>{props.product.precio}</p>
+            <button onClick={()=>{ props.onAddToCart(props.product)}}>agregar al chango</button>
         </div>
     )
 }

@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+    
+  }
+  .container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -20,5 +23,5 @@
   .flex {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }

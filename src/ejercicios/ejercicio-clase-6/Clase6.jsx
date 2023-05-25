@@ -4,15 +4,23 @@ import Producto from "./Producto";
 import accounts from './accounts.json'
 import users from './users.json'
 import Usuario from "./Usuario";
+import { useState } from "react";
+
 function Clase6() {
-  
+  const [chango, setChango] = useState([])
+  function handleAgregar(product){
+    setChango([...chango, product])
+  }
   return (
     <>
+    <h1> Productos en el chango: {chango.length}</h1>
+    <div className="container">
     <div className="flex">
     {products.map((product) => {
       return (
         <Producto key={product.id}
-        {...product}
+        product = {{...product}}
+        onAddToCart={handleAgregar}
         />
       )
     })}
@@ -32,6 +40,7 @@ function Clase6() {
         />
       )
     })}
+    </div>
     </div>
     </>
   );
