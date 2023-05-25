@@ -9,13 +9,14 @@ function Clase8() {
         setSeguidos([...seguidos, usuario])
     }
     function handleEliminar(usuario){
-        console.log(usuario)
         setSeguidos(seguidos.filter(user => user !== usuario))
     }
     
 
     return(
         <>
+        <h2>Seguidos {seguidos.length}</h2>
+        <div className='card-grid seguidos'>
         {seguidos.map((seguido)=> {
             return(
                 <Cuenta 
@@ -25,6 +26,9 @@ function Clase8() {
                 />
             )
         })}
+        </div>
+        <h2>Para seguir {usuarios.length}</h2>
+        <div className='card-grid'>
         {usuarios.map((user)=> {
             return (
                 <Cuenta key={user.id}
@@ -33,7 +37,7 @@ function Clase8() {
                 />
             )
         })}
-        <h1>holas</h1>
+        </div>
         </>
     )
 }

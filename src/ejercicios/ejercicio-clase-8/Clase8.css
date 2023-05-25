@@ -1,16 +1,24 @@
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-    display:flex ;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  .cuenta{
-    border: solid 1px burlywood ;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  
- 
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.cuenta {
+  border: solid 1px burlywood;
+  border-radius: 10px;
+  padding: 15px;
+}
+.seguidos .cuenta{
+  border: solid 1px rebeccapurple;
+  border-radius: 10px;
+  padding: 15px;
+}
