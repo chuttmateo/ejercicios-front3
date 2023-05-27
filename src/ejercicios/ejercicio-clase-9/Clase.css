@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-size: 19px;
+}
+.formulario{
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.error{
+  color: crimson;
+}
+.input{
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 8px;
+}
