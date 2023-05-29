@@ -18,7 +18,7 @@ function Formulario() {
     )
 
     function handleSubmit(e) {
-        let patron = /^[A-Za-z]+$/
+        let patron = /^[A-Za-z .]+$/
         e.preventDefault()
         if(numero <= 0 || isNaN(numero)){
             setErr({numero:true})
@@ -44,12 +44,6 @@ function Formulario() {
     return(
         <>
         <form className="formulario" onSubmit={handleSubmit}>
-            <label>Ingresa tu número favorito</label>
-            <input className="input" 
-            type="number" 
-            placeholder="Ingresa tu número favorito" 
-            value={numero} 
-            onChange={handleChange}/>
             <label htmlFor="name">Nombre</label>
             <input 
             className="input"
@@ -57,16 +51,24 @@ function Formulario() {
             placeholder="Ingresa tu nombre"
             value={nombre}
             onChange={(event)=> setNombre(event.target.value)} />
+            <label>Ingresa tu número favorito</label>
+            <input className="input" 
+            type="number" 
+            placeholder="Ingresa tu número favorito" 
+            value={numero} 
+            onChange={handleChange}/>
             <button>Enviar</button>
+            {err.numero ? <p className="error">Tu número debe ser mayor a 0</p>: undefined}
+            {err.nombre ? <p className="error">Usa solamente letras de la A-Z a-z</p>: undefined}
+            
+        </form>
+            <div className="div-contenedor" > 
             {submit.map((obj) => {
-                
                 return (
-                    <p key={uuidv4()}>{obj.nombre}, tu número favorito es: {obj.numero} </p>
+                    <p className="nombre-numero" key={uuidv4()}>{obj.nombre}, tu número favorito es: {obj.numero} </p>
                 )
             })}
-            {err.numero ? <p className="error">Tu número debe ser mayor a 0</p>: undefined}
-            {err.nombre ? <p className="error">De verdad no tienes nombre???</p>: undefined}
-        </form>
+            </div>
         </>
     )
 }
