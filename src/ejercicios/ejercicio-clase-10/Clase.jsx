@@ -26,6 +26,7 @@ function Clase() {
   return (
     <>
       <Formulario onSubmit={agregarPedido} />
+      <div className="pedidos">
       {pedidos.map((pedido) => {
         return (
           <Pedido
@@ -35,6 +36,8 @@ function Clase() {
           />
         );
       })}
+      </div>
+      
     </>
   );
 }

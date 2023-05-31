@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 /* eslint-disable react/prop-types */
 function Formulario(props) {
   const [plato, setPlato] = useState("");
@@ -16,14 +15,16 @@ function Formulario(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="formulario">
+      <h2>Ingresa tu plato para hacer un pedido</h2>
       <input
         type="text"
         placeholder="Ingresa plato"
         value={plato}
         onChange={handleChange}
+        className="input"
       />
-      <button type="submit">enviar</button>
+      <button type="submit">Ordenar</button>
     </form>
   );
 }
