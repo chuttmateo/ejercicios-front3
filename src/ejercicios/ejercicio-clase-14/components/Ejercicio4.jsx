@@ -24,6 +24,7 @@ export default function Ejercicio4() {
   
     return (
       <div>
+        <h1>Ejercicio 4</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Titulo" value={title} onChange={e => setTitle(e.target.value)} />
           <textarea placeholder="Contenido" value={body} onChange={e => setBody(e.target.value)} />
