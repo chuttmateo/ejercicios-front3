@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Clase from './ejercicios/ejercicio-clase-15/Clase'
+import Clase from './ejercicios/ejercicio-clase-1/Clase'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   //<React.StrictMode>

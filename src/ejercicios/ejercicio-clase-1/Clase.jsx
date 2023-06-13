@@ -1,6 +1,7 @@
 import users from '../../fakeApi/users.json'
+import Ejercicios from './ejercicios/Ejercicios';
 
-function Clase1() {
+function Clase() {
 
     console.log("Primer ejercicio ------");
     console.log(users[0].email);
@@ -9,6 +10,7 @@ function Clase1() {
 
     console.log("Segundo ejercicio ------");
     let [primerUsuario, , , cuartoUsuario] = users
+    console.log("cuartoUsuario", cuartoUsuario);
     let { email, mascotas } = primerUsuario
     console.log({ email, mascotas });
 
@@ -43,7 +45,8 @@ function Clase1() {
     return (
         <>
             <h1>Revisa la consola, bro</h1>
+            <Ejercicios />
         </>
     )
 }
-export default Clase1
+export default Clase

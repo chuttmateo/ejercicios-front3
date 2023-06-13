@@ -14,7 +14,7 @@ export default function Ejercicio3() {
   return (
     <>
       <h1>Ejercicio 3</h1>
-      <select value={planeta} onChange={(e) => setPlaneta(e.target.value)}>
+      <select onChange={(e) => setPlaneta(e.target.value)}>
         <option value="Roshar">Roshar</option>
         <option value="Skadrial">Skadrial</option>
         <option value="Nalthis">Nalthis</option>
