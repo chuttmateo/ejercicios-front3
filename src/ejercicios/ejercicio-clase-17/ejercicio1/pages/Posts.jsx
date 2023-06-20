@@ -18,10 +18,10 @@ export default function Posts() {
   useEffect(() => {
     handleFetch();
   }, []);
-  
+
   return (
     <>
-      <Post {...post} enlace={<Link to={"../"}>Volver</Link>}/>
+      <Post {...post} enlace={<Link to={"../"}>Volver</Link>} />
     </>
   );
 }
