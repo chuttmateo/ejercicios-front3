@@ -22,7 +22,7 @@ export default function Index() {
       {posts.map((post) => {
         return (
           <div key={post.id}>
-            <Post {...post} enlace={<Link to={`/posts/${post.id}`}>asdfsadfsda</Link>}/>
+            <Post {...post} enlace={<Link to={`/posts/${post.id}`}>Ver Información</Link>}/>
           </div>
         );
       })}

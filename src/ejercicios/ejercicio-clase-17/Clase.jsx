@@ -1,15 +1,15 @@
-import { Route, Routes } from "react-router-dom";
 import "./Clase.css";
-import Index from "./pages/Index";
-import Posts from "./pages/Posts";
+import { useState } from "react";
+import Ejercicio1 from "./ejercicio1/App";
+import Ejercicio2 from "./ejercicio2/App";
 
 export default function Clase() {
+  const [numEjercicio, setEjercicio] = useState(true)
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/posts/:id" element={<Posts />} />
-      </Routes>
+      <button onClick={()=>setEjercicio(!numEjercicio)}>Cambiar de Ejercicio</button>
+      {numEjercicio === true && <Ejercicio1 />}
+      {numEjercicio === false && <Ejercicio2 />}
     </>
   );
 }
