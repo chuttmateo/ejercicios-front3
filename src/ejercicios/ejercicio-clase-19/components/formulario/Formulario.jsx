@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
-import { TareasContext } from '../contexts/TareasProvider'
+import { TareasContext } from '../../contexts/TareasProvider'
 import { v4 as uuidv4 } from 'uuid'
+import styles from './Formulario.module.css'
 
 function Formulario() {
     const objeto = useContext(TareasContext)
@@ -15,7 +16,7 @@ function Formulario() {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form className={styles.formulario} onSubmit={handleSubmit}>
         <input type="text" placeholder='Escribe tu tarea' value={text} onChange={(e)=>setText(e.target.value)}/>
         <button type='submit'>Guardar</button>
     </form>
