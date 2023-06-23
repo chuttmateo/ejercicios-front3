@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { TareasContext } from "../../contexts/TareasProvider";
 import Tarea from "../tarea/Tarea";
-import styles from './ListaTareas.module.css'
+import styles from "./ListaTareas.module.css";
 
 function ListaTareas() {
-  const objeto = useContext(TareasContext);
+  const { listaTareas } = useContext(TareasContext);
 
   return (
     <div className={styles.div}>
-      {objeto.listaTareas.map((tarea) => {
+      {listaTareas.map((tarea) => {
         return <Tarea key={tarea.id} {...tarea} />;
       })}
     </div>
