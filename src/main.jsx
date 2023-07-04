@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Clase from "./ejercicios/ejercicio-clase-21/Clase";
+import Clase from "./ejercicios/ejercicio-clase-22/Clase";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
