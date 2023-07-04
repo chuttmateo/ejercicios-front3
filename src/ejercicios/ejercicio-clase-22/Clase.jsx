@@ -26,19 +26,21 @@ function Clase() {
       <h3>LocalStorage en este momento: {dataLocal}</h3>
 
       <h1>EJERCICIO 2</h1>
-      <p>pais {country}</p>
+      <p>Id del pais seleccionado {country}</p>
       <select onChange={(e) => handleCountryChange(e.target.value)}>
+      <option value=""> Selecciona un país </option>
         {countriesList.map((c) => {
           return (
-            <option key={c.id} value={c.name}>
+            <option key={c.id} value={c.id}>
               {c.name}
             </option>
           );
         })}
       </select>
 
-      <p>Provincia {province}</p>
+      <p>Provincia seleccionada {province}</p>
       <select onChange={(e) => handleProvinceChange(e.target.value)}>
+      <option value=""> Selecciona una provincia </option>
         {provincesList.map((p) => {
           return (
             <option key={p.id} value={p.name}>
